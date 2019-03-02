@@ -8,7 +8,13 @@
 
 _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
-[简体中文](README.zh-CN.md)
+[_简体中文_](README.zh-CN.md),
+[_한국어_](README.ko-KR.md),
+[_日本語_](README.ja-JP.md),
+[_Polski_](README.pl-PL.md),
+[_Français_](README.fr-FR.md),
+[_Español_](README.es-ES.md),
+[_Português_](README.pt-BR.md)
 
 ## 資料結構
 
@@ -68,7 +74,7 @@ _Read this in other languages:_
   * [合併排序](src/algorithms/sorting/merge-sort)
   * [快速排序](src/algorithms/sorting/quick-sort)
   * [希爾排序](src/algorithms/sorting/shell-sort)
-* **樹**  
+* **樹**
   * [深度優先搜尋](src/algorithms/tree/depth-first-search) (DFS)
   * [廣度優先搜尋](src/algorithms/tree/breadth-first-search) (BFS)
 * **圖**
@@ -86,7 +92,8 @@ _Read this in other languages:_
   * [漢彌爾頓環](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
   * [強連通組件](src/algorithms/graph/strongly-connected-components) - Kosaraju's algorithm
   * [旅行推銷員問題](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
-* **未分類**  
+  * [Floyd-Warshall algorithm](src/algorithms/graph/floyd-warshall) - 一次循环可以找出所有頂點之间的最短路徑
+* **未分類**
   * [河內塔](src/algorithms/uncategorized/hanoi-tower)
   * [N-皇后問題](src/algorithms/uncategorized/n-queens)
   * [騎士走棋盤](src/algorithms/uncategorized/knight-tour)
@@ -116,7 +123,7 @@ _Read this in other languages:_
 * **動態編程** - build up to a solution using previously found sub-solutions
   * [費伯納西數列](src/algorithms/math/fibonacci)
   * [萊溫斯坦距離](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
-  * [最長共同子序列](src/algorithms/sets/longest-common-subsequnce) (LCS)
+  * [最長共同子序列](src/algorithms/sets/longest-common-subsequence) (LCS)
   * [最長共同子字串](src/algorithms/string/longest-common-substring)
   * [最長遞增子序列](src/algorithms/sets/longest-increasing-subsequence)
   * [最短共同子序列](src/algorithms/sets/shortest-common-supersequence)
@@ -145,7 +152,7 @@ npm test
 
 **以名稱執行該測試**
 ```
-npm test -- -t 'LinkedList'
+npm test -- 'LinkedList'
 ```
 **練習場**
 
@@ -154,7 +161,7 @@ npm test -- -t 'LinkedList'
 接著直接執行下列的指令來測試你練習的 code 是否如預期運作：
 
 ```
-npm test -- -t 'playground'
+npm test -- 'playground'
 ```
 
 ## 有用的資訊
@@ -173,7 +180,7 @@ npm test -- -t 'playground'
 
 下列列出幾個常用的 Big O 標記以及其不同大小資料量輸入後的運算效能比較。
 
-| Big O 標記     | 10個資料量需花費的時間 | 100個資料量需花費的時間 | 1000個資料量需花費的時間  |
+| Big O 標記     | 10個資料量需花費的時間       | 100個資料量需花費的時間       | 1000個資料量需花費的時間        |
 | -------------- | ---------------------------- | ----------------------------- | ------------------------------- |
 | **O(1)**       | 1                            | 1                             | 1                               |
 | **O(log N)**   | 3                            | 6                             | 9                               |
@@ -185,7 +192,7 @@ npm test -- -t 'playground'
 
 ### 資料結構運作複雜度
 
-| 資料結構                 | 存取      | 搜尋       | 插入      | 刪除      |
+| 資料結構                | 存取      | 搜尋      | 插入      | 刪除      |
 | ----------------------- | :-------: | :-------: | :-------: | :-------: |
 | **陣列**                | 1         | n         | n         | n         |
 | **堆疊**                | n         | n         | 1         | 1         |
@@ -199,12 +206,12 @@ npm test -- -t 'playground'
 
 ### 陣列排序演算法複雜度
 
-| 名稱                   | 最佳      | 平均      | 最差           | 記憶體    | 穩定      |
-| --------------------- | :-------: | :-------: | :-----------: | :-------: | :-------: |
+| 名稱                   | 最佳      | 平均      | 最差          | 記憶體    | 穩定      |
+| ---------------------- | :-------: | :-------: | :-----------: | :-------: | :-------: |
 | **氣派排序**           | n         | n^2       | n^2           | 1         | Yes       |
 | **插入排序**           | n         | n^2       | n^2           | 1         | Yes       |
 | **選擇排序**           | n^2       | n^2       | n^2           | 1         | No        |
 | **Heap 排序**          | n log(n)  | n log(n)  | n log(n)      | 1         | No        |
-| **合併排序**         | n log(n)  | n log(n)  | n log(n)      | n         | Yes       |
+| **合併排序**           | n log(n)  | n log(n)  | n log(n)      | n         | Yes       |
 | **快速排序**           | n log(n)  | n log(n)  | n^2           | log(n)    | No        |
-| **希爾排序**        | n log(n)  | 由gap sequence決定   | n (log(n))^2  | 1         | No        |
+| **希爾排序**           | n log(n)  | 由gap sequence決定   | n (log(n))^2  | 1         | No        |
